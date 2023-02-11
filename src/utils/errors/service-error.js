@@ -1,11 +1,10 @@
 const {StatusCodes} = require('http-status-codes');
-const {StatusCodes} = require('http-status-codes');
 
 class ServiceError extends Error {
 
     constructor(
-        message,
-        explanation,
+        message = 'Something Went Wrong',
+        explanation = 'Service layer error',
         statusCode = StatusCodes.INTERNAL_SERVER_ERROR
     ) {
         super();
